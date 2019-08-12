@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms", "WindowsForms\WindowsForms.csproj", "{06DDDE23-97A3-4BF3-93A8-456152226E7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRCodeDecoderDemo", "QRCodeDecoder\QRCodeDecoderDemo\QRCodeDecoderDemo.csproj", "{0DC5EE49-E223-4337-8333-FE77F9657511}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRCodeDecoderLibrary", "QRCodeDecoder\QRCodeDecoderLibrary\QRCodeDecoderLibrary.csproj", "{609656C8-4550-40D0-B039-999CEC29F37D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRCodeVideoDecoder", "QRCodeDecoder\QRCodeVideoDecoder\QRCodeVideoDecoder.csproj", "{85E0FF86-53B2-4400-9C97-B90710230F11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{06DDDE23-97A3-4BF3-93A8-456152226E7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06DDDE23-97A3-4BF3-93A8-456152226E7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06DDDE23-97A3-4BF3-93A8-456152226E7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DC5EE49-E223-4337-8333-FE77F9657511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DC5EE49-E223-4337-8333-FE77F9657511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DC5EE49-E223-4337-8333-FE77F9657511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DC5EE49-E223-4337-8333-FE77F9657511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{609656C8-4550-40D0-B039-999CEC29F37D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{609656C8-4550-40D0-B039-999CEC29F37D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{609656C8-4550-40D0-B039-999CEC29F37D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{609656C8-4550-40D0-B039-999CEC29F37D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85E0FF86-53B2-4400-9C97-B90710230F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85E0FF86-53B2-4400-9C97-B90710230F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85E0FF86-53B2-4400-9C97-B90710230F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85E0FF86-53B2-4400-9C97-B90710230F11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

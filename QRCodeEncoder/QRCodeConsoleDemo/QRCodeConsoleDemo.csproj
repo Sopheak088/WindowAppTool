@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Version>2.1.0</Version>
+    <Authors>Uzi Granot</Authors>
+    <Description>QRCode console test/demo application for QRCode encoder library. Target netcoreapp2.2</Description>
+    <Copyright>Copyright (c) 2018-2019 Uzi Granot. All rights reserved</Copyright>
+    <PackageLicenseExpression>CPOL-1.02</PackageLicenseExpression>
+    <PackageProjectUrl>https://www.codeproject.com/Articles/1250071/QR-Code-Encoder-and-Decoder-NET-class-library-writ</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Uzi-Granot/QRCodeEncoder</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>QRCode, Barcode, NETCOREAPP2.2, Console, PNG</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>D:\CSharp2017\QRCode\QRCodeEncoder\QRCodeConsoleDemo\QRCodeConsoleDemo.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\CSharp2017\QRCode\QRCodeEncoder\QRCodeConsoleDemo\QRCodeConsoleDemo.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QRCodeEncoderLibrary\QRCodeEncoderLibrary.csproj" />
+  </ItemGroup>
+
+</Project>
