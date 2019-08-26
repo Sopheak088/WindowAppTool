@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Reflection;
+using System.Text;
 using System.Windows.Forms;
 
 namespace WindowsForms
@@ -18,6 +22,36 @@ namespace WindowsForms
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Type myType = typeof(Person);
+
+            // Get the fields of the specified class.
+            FieldInfo[] myField = myType.GetFields(BindingFlags.Public | BindingFlags.Instance);
+            MemberInfo[] mem = myType.GetDefaultMembers();
+            //myType.GetDefaultMembers
+
+            Console.WriteLine("\nDisplaying fields that have SpecialName attributes:\n");
+            for (int i = 0; i < myField.Length; i++)
+            {
+                // Determine whether or not each field is a special name.
+                if (myField[i].IsSpecialName)
+                {
+                    //Console.WriteLine("The field {0} has a SpecialName attribute.", myField[i].Name);
+                    MessageBox.Show(myField[i].Name);
+                }
+            }
+
+            TypeInfo t = typeof(Person).GetTypeInfo();
+            IEnumerable<PropertyInfo> pList = t.DeclaredProperties;
+            IEnumerable<MethodInfo> mList = t.DeclaredMethods;
+            List<string> getFiels = new List<string>();
+            foreach (PropertyInfo p in pList)
+            {
+                getFiels.Add(p.Name);
+            }
+            Person per = new Person();
+
+            MessageBox.Show(getFiels + "");
+
             //string data = "";
             //StreamReader reader = new StreamReader(@"C:\WINDOWS\system32");
             //StreamWriter writer = new StreamWriter(@"C:\WINDOWS\system32");
