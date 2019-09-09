@@ -212,8 +212,16 @@ namespace WindowsForms
             lblCpuPercent.Text = GetCPUPercent();
         }
 
+        private void CheckData()
+        {
+            Gender gender = new Gender();
+            gender = GenerDao.getById();
+            MessageBox.Show(gender.Id + "\n" + gender.NameKhmer + "\n" + gender.NameEng);
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            //CheckData();
             lblRamTotal.Text = GetTotalRAM();
             lblRamPercent.Text = FindPercentRAM();
             lblRamFree.Text = GetFreeRAM();
