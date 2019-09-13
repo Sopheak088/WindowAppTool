@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Globalization;
+using System.Drawing;
 
 namespace WindowsForms.Control
 {
@@ -23,10 +24,25 @@ namespace WindowsForms.Control
             return getString;
         }
 
-        public void SetText(string text)
+        public void SetText(object decimalNumber)
         {
-            if (!string.IsNullOrWhiteSpace(text))
-                txtBox.Text = string.Format("{0:C}", decimal.Parse(text));
+            if (!string.IsNullOrWhiteSpace(decimalNumber.ToString()))
+                txtBox.Text = string.Format("{0:C}", decimal.Parse(decimalNumber.ToString()));
+        }
+
+        public void Disable()
+        {
+            txtBox.Enabled = false;
+        }
+
+        public void Enable()
+        {
+            txtBox.Enabled = true;
+        }
+
+        public void ReadOnly(bool value = true)
+        {
+            txtBox.ReadOnly = value;
         }
 
         private void TxtBox_KeyPress(object sender, KeyPressEventArgs e)
