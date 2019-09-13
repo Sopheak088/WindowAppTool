@@ -39,12 +39,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.moneyTextBox1 = new WindowsForms.Control.MoneyTextBox();
+            this.btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
+            this.timer1.Interval = 300;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // lblRamTotal
@@ -137,12 +139,31 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // moneyTextBox1
+            // 
+            this.moneyTextBox1.Location = new System.Drawing.Point(0, 237);
+            this.moneyTextBox1.Name = "moneyTextBox1";
+            this.moneyTextBox1.Size = new System.Drawing.Size(235, 21);
+            this.moneyTextBox1.TabIndex = 10;
+            // 
+            // btn
+            // 
+            this.btn.Location = new System.Drawing.Point(267, 235);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(75, 23);
+            this.btn.TabIndex = 11;
+            this.btn.Text = "Test";
+            this.btn.UseVisualStyleBackColor = true;
+            this.btn.Click += new System.EventHandler(this.Btn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(535, 231);
+            this.ClientSize = new System.Drawing.Size(535, 288);
+            this.Controls.Add(this.btn);
+            this.Controls.Add(this.moneyTextBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -178,6 +199,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Control.MoneyTextBox moneyTextBox1;
+        private System.Windows.Forms.Button btn;
     }
 }
 

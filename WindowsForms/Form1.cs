@@ -1,18 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Drawing;
-using System.Drawing.Imaging;
 using System.Dynamic;
-using System.Globalization;
-using System.IO;
 using System.Linq;
 using System.Management;
 using System.Net;
 using System.Net.Mail;
-using System.Net.Sockets;
-using System.Reflection;
-using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -207,9 +199,15 @@ namespace WindowsForms
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            lblRamPercent.Text = FindPercentRAM();
-            lblRamFree.Text = GetFreeRAM();
-            lblCpuPercent.Text = GetCPUPercent();
+            //lblRamPercent.Text = FindPercentRAM();
+            //lblRamFree.Text = GetFreeRAM();
+            //lblCpuPercent.Text = GetCPUPercent();
+
+            //lblMove.Location = new Point(lblMove.Location.X - 10, lblMove.Location.Y);
+            //if (lblMove.Location.X == 0)
+            //{
+            //    MessageBox.Show("");
+            //}
         }
 
         private void CheckData()
@@ -431,6 +429,12 @@ namespace WindowsForms
             //Graphics g = e.Graphics;
             //int variance = 3;
             // g.DrawRectangle(p, new Rectangle(textBox1.Location.X - variance, textBox1.Location.Y - variance, textBox1.Width + variance, textBox1.Height + variance));
+        }
+
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(moneyTextBox1.GetText());
+            moneyTextBox1.SetText("9.30");
         }
     }
 }
