@@ -220,6 +220,7 @@ namespace WindowsForms
         private void Form1_Load(object sender, EventArgs e)
         {
             //CheckData();
+            string _fileName = DateTime.Now.ToString("yyyyMMddhhmmss");
             lblRamTotal.Text = GetTotalRAM();
             lblRamPercent.Text = FindPercentRAM();
             lblRamFree.Text = GetFreeRAM();
@@ -435,6 +436,8 @@ namespace WindowsForms
         {
             MessageBox.Show(moneyTextBox1.GetText());
             moneyTextBox1.SetText("9.30");
+            comboBox1.SelectedValue = 1;
+            string st = comboBox1.SelectedValue.ToString();
         }
     }
 }
